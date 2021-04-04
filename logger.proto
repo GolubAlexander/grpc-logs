@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package logger;
+option go_package = "internal/server";
+
+import "google/protobuf/timestamp.proto";
+
+service Logger {
+  rpc FetchLogs(Empty) returns (stream LogMessage);
+}
+
+message LogMessage {
+  string label = 1;
+  string text = 2;
+  google.protobuf.Timestamp event_at = 3;
+}
+
+message Empty {}
