@@ -45,7 +45,7 @@ func (s *Server) FetchLogs(_ *Empty, stream Logger_FetchLogsServer) error {
 				Text:    m.Text,
 				EventAt: timestamppb.New(m.EventAt),
 			}); err != nil {
-
+				return err
 			}
 		}
 	}
