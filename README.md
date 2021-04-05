@@ -8,7 +8,7 @@ It's for students of netology.ru.
 You should run both nodes from Makefile then start collector.
 
 ```
-make node
+make nodes
 make collector
 ```
 
